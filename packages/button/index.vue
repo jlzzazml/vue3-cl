@@ -103,7 +103,7 @@ const styles = computed(() => {
   cursor: pointer;
   font-size: 14px;
   border-radius: 2px;
-  background: #fff;
+  background: #e72525;
   transition: all 0.15s ease;
   user-select: none;
   overflow: hidden;
