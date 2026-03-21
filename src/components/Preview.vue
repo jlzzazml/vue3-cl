@@ -19,20 +19,22 @@
 </template>
 
 <script setup>
-import { onMounted, ref, nextTick } from "vue";
+import { onMounted, ref } from "vue";
 import Message from "../../packages/message/index";
 const props = defineProps({
   compName: {
     type: String,
     default: "",
-    require: true,
+    required: true,
   },
   demoName: {
     type: String,
     default: "",
-    require: true,
+    required: true,
   },
 });
+console.log('compName:', props.compName)
+console.log('demoName:', props.demoName)
 
 const showCode = ref(false);
 const border = ref("1px solid rgba(0,0,0,.06)");

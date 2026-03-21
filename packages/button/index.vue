@@ -110,8 +110,6 @@ const styles = computed(() => {
   line-height: 1;
   white-space: nowrap;
 }
-.yuan-button i {
-}
 .yuan-button span {
   display: inline-block;
 }

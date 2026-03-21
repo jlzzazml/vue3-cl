@@ -5,24 +5,10 @@ export default [
     component: () => import('@/views/index.vue')
   },
   {
-    path: '/yuan',
-    redirect: '/yuanui'
-  },
-  {
-    path: '/yuanui',
+    path: '/components',
     name: '组件页面',
     component: () => import('@/views/home.vue'),
     children: [
-      {
-        path: '',
-        name: '贡献指南',
-        component: () => import('/packages/Participation/doc/doc.md')
-      },
-      {
-        path: 'updatelog',
-        name: '更新日志',
-        component: () => import('/packages/updatelog/doc/doc.md')
-      },
       {
         path: 'install',
         name: '安装使用',
@@ -182,6 +168,11 @@ export default [
         path: 'divider',
         name: 'divider 分割线',
         component: () => import('/packages/divider/doc/doc.md')
+      },
+      {
+        path: 'tag',
+        name: 'Tag标签',
+        component: () => import('/packages/tag/doc/doc.md')
       }
     ]
   }

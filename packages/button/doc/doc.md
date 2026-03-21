@@ -6,7 +6,7 @@ import demo4 from './demo4.vue'
 import demo5 from './demo5.vue'
 import demo6 from './demo6.vue'
 import Attributes from './Attributes.vue'
-import preview from '@/components/preview.vue'
+import Preview from '@/components/Preview.vue'
 </script>
 
 # Button 按钮
@@ -23,7 +23,7 @@ import preview from '@/components/preview.vue'
 <div class="componetnsBox">
   <demo1/>
 </div>
-<preview compName="button" demoName="demo1"/>
+<Preview comp-name="button" demo-name="demo1"/>
 
 ## 禁用状态
 
@@ -33,7 +33,7 @@ import preview from '@/components/preview.vue'
 <div class="componetnsBox">
   <demo2/>
 </div>
-<preview compName="button" demoName="demo2"/>
+<preview comp-name="button" demo-name="demo2"/>
 
 ## 不同大小
 
@@ -43,7 +43,7 @@ import preview from '@/components/preview.vue'
 <div class="componetnsBox">
   <demo3/>
 </div>
-<preview compName="button" demoName="demo3"/>
+<preview comp-name="button" demo-name="demo3"/>
 
 ## 图标按钮
 
@@ -53,7 +53,7 @@ import preview from '@/components/preview.vue'
 <div class="componetnsBox">
   <demo4/>
 </div>
-<preview compName="button" demoName="demo4"/>
+<preview comp-name="button" demo-name="demo4"/>
 
 ## 加载状态
 
@@ -63,7 +63,7 @@ import preview from '@/components/preview.vue'
 <div class="componetnsBox">
   <demo5/>
 </div>
-<preview compName="button" demoName="demo5"/>
+<preview comp-name="button" demo-name="demo5"/>
 
 ## 自定义颜色
 
@@ -73,9 +73,11 @@ import preview from '@/components/preview.vue'
 <div class="componetnsBox">
   <demo6/>
 </div>
-<preview compName="button" demoName="demo6"/>
+<preview comp-name="button" demo-name="demo6"/>
 
 ## Attributes 参数
 
 <Attributes/>
 <br/>
+
+

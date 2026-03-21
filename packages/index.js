@@ -1,37 +1,38 @@
 //导入组件
-import mButton from "./button/index";
-import mInput from "./input/index";
-import mTable from "./table/index";
-import mSelect from "./select/index";
-import mDropdown from "./dropDown/index";
-import mRadio from "./radio/index";
-import mCheckbox from "./checkbox/index";
-import Message from "./message/index";
-import Confirm from "./confirm/index";
-import mModal from "./modal/index";
-import mDrawer from "./drawer/index";
-import Loading from "./loading/index";
-import mSwitch from "./switch/index";
-import mTree from "./tree/index";
-import mOptfile from "./optfile/index";
-import mTextarea from "./textarea/index";
-import mRow from "./mrow/index";
-import mCol from "./mcol/index";
-import mPagination from "./pagination/index";
-import $yuan from "./function/index";
-import mDate from "./date/index";
+import mSpace from "./Space/index";
 import mBacktop from "./backtop/index";
+import mBadge from './badge/index';
+import mBreadcrumb from './breadcrumb/index';
+import mButton from "./button/index";
+import mCheckbox from "./checkbox/index";
 import mCollapse from "./collapse/index";
 import mCollapseItem from "./collapse/item/index";
+import mColorPicker from './colorPicker/index';
+import Confirm from "./confirm/index";
+import mDate from "./date/index";
+import mDivider from './divider/index';
+import mDrawer from "./drawer/index";
+import mDropdown from "./dropDown/index";
+import TimeFormat from "./function/index";
+import mInput from "./input/index";
+import Loading from "./loading/index";
+import mCol from "./mcol/index";
 import mMenu from "./menu/index";
-import mTabs from "./tabs/index";
-import mSpace from "./Space/index";
+import Message from "./message/index";
+import mModal from "./modal/index";
+import mRow from "./mrow/index";
+import mOptfile from "./optfile/index";
+import mPagination from "./pagination/index";
 import mPopover from './popover/index';
-import mProgress from './progress/index'
-import mColorPicker from './colorPicker/index'
-import mBreadcrumb from './breadcrumb/index'
-import mBadge from './badge/index'
-import mDivider from './divider/index'
+import mProgress from './progress/index';
+import mRadio from "./radio/index";
+import mSelect from "./select/index";
+import mSwitch from "./switch/index";
+import mTable from "./table/index";
+import mTabs from "./tabs/index";
+import mTextarea from "./textarea/index";
+import mTree from "./tree/index";
+import ClTag from './tag/index.js'
 
 
 //存在所有组件
@@ -64,7 +65,8 @@ const components = [
   { name: 'mColorPicker', component: mColorPicker },
   { name: 'mBreadcrumb', component: mBreadcrumb },
   { name: 'mBadge', component: mBadge },
-  { name: 'mDivider', component: mDivider }
+  { name: 'mDivider', component: mDivider },
+  {name:'ClTag',component:ClTag}
 ];
 const install = (app) => {
   components.forEach(({ name, component }) => {
@@ -73,9 +75,9 @@ const install = (app) => {
   app.config.globalProperties.$message = Message
   app.config.globalProperties.$Confirm = Confirm
   app.config.globalProperties.$Loading = Loading
-  app.config.globalProperties.$yuan = $yuan
+  app.config.globalProperties.$timeFormat = TimeFormat
 }
-const yuanUi = {
+const cl_Ui = {
   version: '0.4.1',
   install
 }
@@ -84,41 +86,11 @@ if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)
 }
 export {
-  // 导出的对象必须具有 install，才能被 app.use() 方法安装
-  install,
-  // 以下是具体的组件列表
-  mButton,
-  mInput,
-  mTable,
-  mSelect,
-  mDropdown,
-  mRadio,
-  mCheckbox,
-  Message,
   Confirm,
-  mModal,
-  mDrawer,
-  Loading,
-  mSwitch,
-  mTree,
-  mOptfile,
-  mTextarea,
-  mRow,
-  mCol,
-  mPagination,
-  $yuan,
-  mDate,
-  mBacktop,
-  mCollapse,
-  mCollapseItem,
-  mMenu,
-  mTabs,
-  mPopover,
-  mSpace,
-  mProgress,
-  mColorPicker,
-  mBreadcrumb,
-  mBadge,
-  mDivider
-}
-export default yuanUi
+  // 导出的对象必须具有 install，才能被 app.use() 方法安装
+  install, Loading, mBacktop, mBadge, mBreadcrumb,
+  // 以下是具体的组件列表
+  mButton, mCheckbox, mCol, mCollapse,
+  mCollapseItem, mColorPicker, mDate, mDivider, mDrawer, mDropdown, Message, mInput, mMenu, mModal, mOptfile, mPagination, mPopover, mProgress, mRadio, mRow, mSelect, mSpace, mSwitch, mTable, mTabs, mTextarea, mTree, TimeFormat,ClTag
+};
+export default cl_Ui

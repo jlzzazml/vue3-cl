@@ -4,7 +4,7 @@
     <section class="hero-section">
       <div class="hero-container">
         <div class="hero-content">
-          <h1 class="hero-title">yuan-ui</h1>
+          <h1 class="hero-title">vue3-cl</h1>
           <p class="hero-subtitle">一套适合开发者使用的轻量级UI组件库，支持Vue 3</p>
           <p class="hero-description">
             支持Vite+Vue3版本，更小的体积，更快的响应，更强的拓展性，让我们一起向未来，拥抱这精彩的Vue世界！
@@ -13,13 +13,7 @@
             <m-button type="primary" size="large" @click="toComponents">
               立即上手
             </m-button>
-            <m-button size="large" leftIcon="m-icon-github" @click="goGuthub">
-              GitHub
-            </m-button>
           </div>
-        </div>
-        <div class="hero-image">
-          <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=modern%20UI%20components%20showcase%20with%20blue%20theme%20like%20Ant%20Design&image_size=landscape_16_9" alt="yuan-ui components" />
         </div>
       </div>
     </section>
@@ -43,7 +37,7 @@
       <div class="container">
         <h2 class="section-title">组件预览</h2>
         <p class="section-description">
-          yuan-ui 提供了丰富的组件，满足您的各种开发需求
+          vue3-cl 提供了丰富的组件，满足您的各种开发需求
         </p>
         <div class="components-grid">
           <div class="component-card" v-for="(component, index) in components" :key="index">
@@ -59,32 +53,14 @@
       <div class="container">
         <div class="footer-content">
           <div class="footer-logo">
-            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20logo%20design%20for%20yuan-ui%20Vue%203%20component%20library%20with%20modern%20geometric%20elements%20and%20blue%20color%20palette&image_size=square" alt="yuan-ui" />
-            <h3>yuan-ui</h3>
+            <h3>vue3-cl</h3>
           </div>
           <div class="footer-links">
             <div class="footer-link-group">
               <h4>资源</h4>
               <a @click="toComponents">组件文档</a>
-              <a @click="goToNpm">NPM</a>
-              <a @click="verSion">更新日志</a>
-            </div>
-            <div class="footer-link-group">
-              <h4>社区</h4>
-              <a @click="goGuthub">GitHub</a>
-              <a href="#">Issues</a>
-              <a href="#">Pull Requests</a>
-            </div>
-            <div class="footer-link-group">
-              <h4>关于</h4>
-              <a href="#">关于我们</a>
-              <a href="#">贡献指南</a>
-              <a href="#">License</a>
             </div>
           </div>
-        </div>
-        <div class="footer-bottom">
-          <p>© 2026 yuan-ui. 基于 MIT 协议开源</p>
         </div>
       </div>
     </footer>
@@ -92,8 +68,8 @@
 </template>
 
 <script setup>
+import { onMounted, ref } from "vue";
 import { useRouter } from "vue-router";
-import { ref, onMounted } from "vue";
 
 const router = useRouter();
 
@@ -124,11 +100,6 @@ const features = ref([
     description: "极少的代码量，极简配置项，让开发更加高效。",
     icon: "🎨"
   },
-  {
-    title: "TypeScript支持",
-    description: "完善的TypeScript类型定义，提供更好的开发体验。",
-    icon: "📝"
-  }
 ]);
 
 // 组件列表
@@ -149,19 +120,7 @@ const components = ref([
 
 // 导航方法
 const toComponents = () => {
-  router.push("/yuanui");
-};
-
-const goGuthub = () => {
-  window.open("https://github.com/your-username/yuan-ui");
-};
-
-const goToNpm = () => {
-  window.open("https://www.npmjs.com/package/yuan-ui");
-};
-
-const verSion = () => {
-  router.push("/yuanui/updatelog");
+  router.push("/components");
 };
 
 // 设置会话存储
@@ -209,7 +168,7 @@ onMounted(() => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  width: 800px;
   margin: 0 auto;
   padding: 0 24px;
   flex-wrap: wrap;
@@ -218,7 +177,7 @@ onMounted(() => {
 .hero-content {
   flex: 1;
   min-width: 300px;
-  margin-bottom: 40px;
+  margin: 0 auto;
 }
 
 .hero-title {

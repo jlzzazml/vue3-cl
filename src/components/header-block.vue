@@ -1,8 +1,7 @@
 <template>
   <div class="header-block-box">
     <div class="logoBox">
-      <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20logo%20design%20for%20yuan-ui%20Vue%203%20component%20library%20with%20modern%20geometric%20elements%20and%20blue%20color%20palette&image_size=square" alt="yuan-ui" @click="toHome" />
-        <a href="javascript:;" @click="toHome">yuan-ui</a>
+      <a href="javascript:;" @click="toHome">vue3-cl</a>
     </div>
     <div class="toolsBox">
       <a href="javascript:;" v-for="(item, index) in tools" :key="index" :class="{ active: tabIndex == index }"
@@ -12,13 +11,13 @@
 </template>
 
 <script setup>
+import { onMounted, reactive, ref } from "vue";
 import { useRouter } from "vue-router";
-import { reactive, ref, onMounted } from "vue";
 const { push, currentRoute } = useRouter();
 const toHome = () => push("/");
 const fullPath = ref(currentRoute.value.fullPath)
 const tabIndex = ref(
-  fullPath == "/yuan"
+  fullPath == "/components"
     ? 1
     : sessionStorage.getItem("tabIndex") || 0
 );
@@ -31,32 +30,20 @@ const state = reactive({
     },
     {
       name: "组件",
-      path: "/yuan",
+      path: "/components",
     },
-    // {
-    //   name:"支持yuan",
-    //   path:'open',
-    // },
-    {
-      name: "更新日志",
-      path: "/yuan/updatelog",
-    }
   ],
 });
 const { tools } = state;
 const pageView = (item, index) => {
   tabIndex.value = index;
-  sessionStorage.setItem("tabIndex", index);
-  if (item.path == "open") {
-    window.open(item.url);
-  } else {
+  sessionStorage.setItem("tabIndex", index);  
     if (item.path != fullPath) {
       push(item.path);
     }
-  }
 };
 onMounted(() => {
-  if (fullPath == "/yuan") {
+  if (fullPath == "/components") {
     sessionStorage.setItem("tabIndex", 1);
   }
 });

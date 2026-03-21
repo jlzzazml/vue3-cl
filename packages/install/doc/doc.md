@@ -2,17 +2,17 @@
 
 ## 安装
 
-#### 推荐使用 _npm_ 的方式安装,也可选用 _cpm_ 或 _yarn_ 进行安装。
+#### 推荐使用 _npm_ 的方式安装,也可选用 _pnpm_ 或 _yarn_ 进行安装。
 
 ```
-npm install  yuan-ui
-cnpm install  yuan-ui --save
-yarn add yuan-ui
+npm install  vue3-cl
+pnpm install  vue3-cl 
+yarn add vue3-cl
 ```
 
 <br/>
 
-## 使用 yuan-ui
+## 使用 vue3-cl
 
 #### 需要注意的是 css 样式文件需要您单独引入。
 
@@ -20,11 +20,11 @@ yarn add yuan-ui
 /*js*/
 import { createApp } from "vue";
 import App from "@/App.vue";
-import yuanUi from "yuan-ui";
-import "../node_modules/yuan-ui/dist/style.css";
+import cl_Ui from "vue3-cl";
+import "../node_modules/vue3-cl/dist/style.css";
 
 const app = createApp(App);
-app.use(yuanUi);
+app.use(cl_Ui);
 app.mount("#app");
 ```
 
@@ -32,7 +32,7 @@ app.mount("#app");
 
 ## 愉快开始
 
-#### 至此 yuan-ui 就引入完成并且可以使用了。
+#### 至此 vue3-cl 就引入完成并且可以使用了。
 
 ```html
 <!-- html -->
@@ -48,7 +48,7 @@ app.mount("#app");
 
 ```javascript
 /*js*/
-import { mButton, mInput } from "yuan-ui";
+import { mButton, mInput } from "vue3-cl";
 ```
 
 <br/>

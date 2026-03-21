@@ -3,28 +3,11 @@ export default [
     'title-cn': '快速上手',
     'title-en': 'Quick start',
     list: [
-      // {'title-cn':'使用须知','title-en':'Usage notice','path':'/yuanui'},
-      {
-        'title-cn': '参与贡献',
-        'title-en': 'Participation and contribution',
-        path: '/yuanui'
-      },
-      // {'title-cn':'支持YUAN-UI','title-en':'Support YUAN-UI','path':'/yuanui/support'},
-      {
-        'title-cn': '更新日志',
-        'title-en': 'Update log',
-        path: '/yuanui/updatelog'
-      },
       {
         'title-cn': '安装使用',
         'title-en': 'Install and use',
-        path: '/yuanui/install'
+        path: '/components/install'
       }
-      // {
-      //   "title-cn": "Demo 示例",
-      //   "title-en": "Demo Example",
-      //   path: "/yuanui/demo",
-      // },
     ]
   },
   {
@@ -34,10 +17,10 @@ export default [
       {
         'title-cn': 'layout 布局',
         'title-en': 'layout',
-        path: '/yuanui/layout'
+        path: '/components/layout'
       },
-      { 'title-cn': 'Color 颜色', 'title-en': 'Colors', path: '/yuanui/color' },
-      { 'title-cn': 'Icon 图标', 'title-en': 'Icons', path: '/yuanui/icon' }
+      { 'title-cn': 'Color 颜色', 'title-en': 'Colors', path: '/components/color' },
+      { 'title-cn': 'Icon 图标', 'title-en': 'Icons', path: '/components/icon' }
     ]
   },
   {
@@ -45,55 +28,60 @@ export default [
     'title-en': 'Universal',
     list: [
       {
+        'title-cn': 'Tag标签',
+        'title-en': 'Tag',
+        path: '/components/tag'
+      },
+      {
         'title-cn': 'Button 按钮',
         'title-en': 'Buttons',
-        path: '/yuanui/button'
+        path: '/components/button'
       },
       {
         'title-cn': 'Input 输入框',
         'title-en': 'Inputs',
-        path: '/yuanui/input'
+        path: '/components/input'
       },
       {
         'title-cn': 'Textarea 文本域',
         'title-en': 'Textarea',
-        path: '/yuanui/textarea'
+        path: '/components/textarea'
       },
       {
         'title-cn': 'Space 间距',
         'title-en': 'Space',
-        path: '/yuanui/Space'
+        path: '/components/Space'
       },
       {
         'title-cn': 'Select 下拉框',
         'title-en': 'Select',
-        path: '/yuanui/select'
+        path: '/components/select'
       },
       {
         'title-cn': 'Dropdown 下拉菜单',
         'title-en': 'Dropdown',
-        path: '/yuanui/dropdown'
+        path: '/components/dropdown'
       },
-      { 'title-cn': 'Radio 单选', 'title-en': 'Radios', path: '/yuanui/radio' },
+      { 'title-cn': 'Radio 单选', 'title-en': 'Radios', path: '/components/radio' },
       {
         'title-cn': 'Checkbox 多选',
         'title-en': 'Checkboxes',
-        path: '/yuanui/checkbox'
+        path: '/components/checkbox'
       },
       {
         'title-cn': 'Switch 开关',
         'title-en': 'Switch',
-        path: '/yuanui/switch'
+        path: '/components/switch'
       },
       {
         'title-cn': 'OptFile 文件选择',
         'title-en': 'OptFile',
-        path: '/yuanui/optfile'
+        path: '/components/optfile'
       },
       // {
       //   'title-cn': 'ColorPicker 颜色选择器',
       //   'title-en': 'ColorPicker',
-      //   path: '/yuanui/colorPicker'
+      //   path: '/components/colorPicker'
       // }
     ]
   },
@@ -101,22 +89,22 @@ export default [
     'title-cn': '数据',
     'title-en': 'Data',
     list: [
-      { 'title-cn': 'Badge 徽章', 'title-en': 'Badge', path: '/yuanui/badge' },
-      { 'title-cn': 'Table 表格', 'title-en': 'Table', path: '/yuanui/table' },
+      { 'title-cn': 'Badge 徽章', 'title-en': 'Badge', path: '/components/badge' },
+      { 'title-cn': 'Table 表格', 'title-en': 'Table', path: '/components/table' },
       {
         'title-cn': 'Pagination 分页',
         'title-en': 'Pagination',
-        path: '/yuanui/pagination'
+        path: '/components/pagination'
       },
       {
         'title-cn': 'Date 日期选择',
         'title-en': 'Datepicker',
-        path: '/yuanui/date'
+        path: '/components/date'
       },
-      { 'title-cn': 'Tree 树形控件', 'title-en': 'Tree', path: '/yuanui/tree' },
-      { 'title-cn': 'Menu 菜单', 'title-en': 'Menu', path: '/yuanui/menu' },
-      { 'title-cn': 'Tab 切换', 'title-en': 'Tabs', path: '/yuanui/tabs' },
-      { 'title-cn': 'Progress 进度条', 'title-en': 'Progress', path: '/yuanui/progress' }
+      { 'title-cn': 'Tree 树形控件', 'title-en': 'Tree', path: '/components/tree' },
+      { 'title-cn': 'Menu 菜单', 'title-en': 'Menu', path: '/components/menu' },
+      { 'title-cn': 'Tab 切换', 'title-en': 'Tabs', path: '/components/tabs' },
+      { 'title-cn': 'Progress 进度条', 'title-en': 'Progress', path: '/components/progress' }
     ]
   },
   {
@@ -126,33 +114,33 @@ export default [
       {
         'title-cn': 'Message 消息提示',
         'title-en': 'Message',
-        path: '/yuanui/message'
+        path: '/components/message'
       },
       {
         'title-cn': 'Popover 弹出框',
         'title-en': 'Popover',
-        path: '/yuanui/popover'
+        path: '/components/popover'
       },
       {
         'title-cn': 'Confirm 消息确认',
         'title-en': 'Confirm',
-        path: '/yuanui/confirm'
+        path: '/components/confirm'
       },
-      { 'title-cn': 'Modal 弹窗', 'title-en': 'Modal', path: '/yuanui/modal' },
+      { 'title-cn': 'Modal 弹窗', 'title-en': 'Modal', path: '/components/modal' },
       {
         'title-cn': 'Drawer 抽屉',
         'title-en': 'Drawer',
-        path: '/yuanui/drawer'
+        path: '/components/drawer'
       },
       {
         'title-cn': 'Loading 加载中',
         'title-en': 'Loading',
-        path: '/yuanui/loading'
+        path: '/components/loading'
       },
       {
         'title-cn': 'Backtop 回到顶部',
         'title-en': 'Backtop',
-        path: '/yuanui/backtop'
+        path: '/components/backtop'
       }
     ]
   },
@@ -163,7 +151,7 @@ export default [
       {
         'title-cn': 'Divider 分割线',
         'title-en': 'Divider',
-        path: '/yuanui/divider'
+        path: '/components/divider'
       }
     ]
   }
@@ -174,7 +162,7 @@ export default [
   //     {
   //       'title-cn': '时间戳转换日期格式',
   //       'title-en': 'formatDate',
-  //       path: '/yuanui/formatDate'
+  //       path: '/components/formatDate'
   //     }
   //   ]
   // }
