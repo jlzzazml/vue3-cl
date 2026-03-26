@@ -1,21 +1,15 @@
-import { defineConfig } from 'vitepress';
 import { resolve } from 'path';
+import { defineConfig } from 'vitepress';
 
 export default defineConfig({
-  title: 'yuan-ui',
+  title: 'vue3-cl',
   description: 'A Vue 3 + TypeScript Enterprise UI Component Library',
   lang: 'zh-CN',
   base: '/',
-  head: [
-    ['link', { rel: 'icon', href: '/favicon.svg' }]
-  ],
   themeConfig: {
-    logo: '/favicon.svg',
     nav: [
       { text: '首页', link: '/' },
       { text: '组件', link: '/components/button' },
-      { text: '指南', link: '/guide/quickstart' },
-      { text: '更新日志', link: '/changelog' }
     ],
     sidebar: {
       '/components/': [
@@ -67,24 +61,6 @@ export default defineConfig({
           ]
         }
       ],
-      '/guide/': [
-        {
-          text: '开发指南',
-          items: [
-            { text: '快速上手', link: '/guide/quickstart' },
-            { text: '国际化', link: '/guide/i18n' },
-            { text: '主题定制', link: '/guide/theme' },
-            { text: '按需引入', link: '/guide/import' }
-          ]
-        }
-      ]
-    },
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/your-username/yuan-ui-vue3' }
-    ],
-    footer: {
-      message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2024-present yuan-ui'
     },
     outline: 'deep'
   },

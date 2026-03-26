@@ -1,13 +1,10 @@
-# yuan-ui-vue3
+# vue3-cl
 
-vitepress文档有点展示的小问题，欢迎提交正确代码（PR）
-
-一套基于 Vue 3 + TypeScript 的企业级（玩具级） UI 组件库。
+一套基于 Vue 3 + JavaScript 的UI 组件库。
 
 ## 特性
 
 - **Vue 3 原生支持**：基于 Vue 3.2+ 和 Composition API 开发
-- **TypeScript 支持**：完整的类型定义
 - **按需引入**：支持按需加载，减少打包体积
 - **主题定制**：支持 CSS 变量主题定制
 - **丰富的组件**：包含 30+ 常用组件
@@ -15,29 +12,29 @@ vitepress文档有点展示的小问题，欢迎提交正确代码（PR）
 ## 安装
 
 ```bash
-npm install yuan-ui-vue3
+npm install vue3-cl
 ```
 
 ## 快速开始
 
 ### 全局引入
 
-```typescript
+```Javascript
 import { createApp } from 'vue'
 import App from './App.vue'
-import YuanUI from 'yuan-ui-vue3'
+import cl_Ui from 'vue3-cl'
 import 'yuan-ui-vue3/dist/style.css'
 
 const app = createApp(App)
-app.use(YuanUI)
+app.use(cl_Ui)
 app.mount('#app')
 ```
 
 ### 按需引入
 
 ```typescript
-import { mButton, mInput } from 'yuan-ui-vue3'
-import 'yuan-ui-vue3/dist/style.css'
+import { mButton, mInput } from 'vue3-cl'
+import 'vue3-cl/dist/style.css'
 
 app.component('mButton', mButton)
 app.component('mInput', mInput)
@@ -121,7 +118,7 @@ npm run test
 ## 项目结构
 
 ```
-yuan-ui-vue3/
+vue3-cl/
 ├── docs/                 # 文档
 │   └── components/       # 组件文档
 ├── packages/             # 组件源码
@@ -132,7 +129,3 @@ yuan-ui-vue3/
 ├── dist/                 # 构建输出
 └── package.json
 ```
-
-## LICENSE
-
-MIT

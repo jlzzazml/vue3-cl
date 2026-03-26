@@ -8,6 +8,7 @@ export default [
     path: '/components',
     name: '组件页面',
     component: () => import('@/views/home.vue'),
+    redirect: '/components/install',
     children: [
       {
         path: 'install',

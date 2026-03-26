@@ -1,25 +1,20 @@
-import { defineConfig } from "vite";
 import Vue from "@vitejs/plugin-vue";
-import Markdown from "vite-plugin-md";
-import Dts from "vite-plugin-dts";
 import { resolve } from "path";
+import { defineConfig } from "vite";
+import Markdown from "vite-plugin-md";
+
 export default defineConfig({
   plugins: [
     Vue({
       include: [/\.vue$/, /\.md$/],
     }),
     Markdown(),
-    Dts({
-      insertTypesEntry: true,
-      tsconfigPath: "./tsconfig.json",
-      outputDir: "dist/types",
-      rollupTypes: true,
-      exclude: ["node_modules", "dist", "**/*.spec.ts", "**/*.test.ts", "docs/.vitepress/**"]
-    }),
+    // 移除 Dts 插件（TypeScript 类型生成）
   ],
+
   build: {
     rollupOptions: {
-      external: ["vue","highlight.js","sass"],
+      external: ["vue", "highlight.js", "sass"],
       output: {
         globals: {
           vue: "Vue",
@@ -43,12 +38,16 @@ export default defineConfig({
     },
     cssCodeSplit: false, // 不分割 CSS，确保所有样式合并
   },
+
   resolve: {
     alias: {
       "@": resolve(__dirname, "src"),
       "yuan-ui": resolve(__dirname, "packages/index.js"),
     },
+    // 添加文件扩展名解析顺序
+    extensions: ['.js', '.vue', '.json', '.md']
   },
+
   css: {
     preprocessorOptions: {
       scss: {
@@ -56,4 +55,18 @@ export default defineConfig({
       },
     },
   },
+
+  // 添加服务器配置
+  server: {
+    port: 3002,
+    open: true,
+    fs: {
+      allow: ['..']
+    }
+  },
+
+  // 优化依赖预构建
+  optimizeDeps: {
+    include: ['vue', 'highlight.js']
+  }
 });
