@@ -54,7 +54,7 @@
 defineOptions({
   name: 'mColorPicker'
 });
-import { ref, computed, onMounted, getCurrentInstance, nextTick } from 'vue'
+import { computed, getCurrentInstance, onMounted, ref } from 'vue';
 const props = defineProps({
   modelValue: {
     type: String
@@ -73,6 +73,7 @@ const props = defineProps({
     default: false
   }
 })
+
 const hoverColor = ref(null)
 const showColor = computed(() => {
   return hoverColor.value ?? props.modelValue ?? props.defaultColor
@@ -199,7 +200,7 @@ const hexToRgb = (hex) => {
   return rgb
 }
 
-const isShow = ref(false)
+const isShow = ref(true)
 const show = () => {
   isShow.value = true
 }

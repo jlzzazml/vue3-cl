@@ -1,4 +1,4 @@
-import ClTag from './tag.vue'
+import ClTag from './index.vue'
 
 ClTag.install = (app) => {
     app.component(ClTag.name, ClTag)

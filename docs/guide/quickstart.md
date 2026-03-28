@@ -3,7 +3,7 @@
 ## 安装
 
 ```bash
-npm install yuan-ui
+npm install vue3-cl
 ```
 
 ## 完整引入
@@ -12,13 +12,13 @@ npm install yuan-ui
 
 ```ts
 import { createApp } from 'vue';
-import YuanUI from 'yuan-ui';
-import 'yuan-ui/styles/index.css';
+import clUI from 'vue3-cl';
+import 'vue3-cl/styles/index.css';
 import App from './App.vue';
 
 const app = createApp(App);
 
-app.use(YuanUI);
+app.use(clUI);
 app.mount('#app');
 ```
 

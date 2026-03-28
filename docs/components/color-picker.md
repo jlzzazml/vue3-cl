@@ -13,13 +13,14 @@ const color2 = ref('#52c41a')
 ## 基础用法
 
 <div class="demo-preview">
-  <m-color-picker v-model="color1"></m-color-picker>
+<div>测试文字</div>
+  <mColorPicker v-model="color1"></mColorPicker>
 </div>
 
 ::: details 查看代码
 ```vue
 <template>
-  <m-color-picker v-model="color1"></m-color-picker>
+  <mColorPicker v-model="color1"></mColorPicker>
 </template>
 
 <script setup>
@@ -32,13 +33,13 @@ const color1 = ref('#1890ff')
 ## 带默认颜色
 
 <div class="demo-preview">
-  <m-color-picker v-model="color2" :defaultColor="'#52c41a'"></m-color-picker>
+  <mColorPicker v-model="color2" :defaultColor="'#52c41a'"></mColorPicker>
 </div>
 
 ::: details 查看代码
 ```vue
 <template>
-  <m-color-picker v-model="color2" :defaultColor="'#52c41a'"></m-color-picker>
+  <mColorPicker v-model="color2" :defaultColor="'#52c41a'"></mColorPicker>
 </template>
 ```
 :::
