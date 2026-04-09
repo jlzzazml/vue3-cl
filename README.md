@@ -47,8 +47,7 @@ app.component('mInput', mInput)
 | 组件 | 说明 |
 |------|------|
 | [Button 按钮](/components/button) | 触发操作 |
-| [Icon 图标](/components/icon) | 图标组件 |
-| [Space 间距](/components/space) | 间距组件 |
+| [Tag 标签](/components/tag) | 标签 |
 
 ### 布局组件
 
@@ -64,16 +63,6 @@ app.component('mInput', mInput)
 | [Select 选择器](/components/select) | 下拉选择 |
 | [Checkbox 多选框](/components/checkbox) | 多选 |
 | [Radio 单选框](/components/radio) | 单选 |
-| [Switch 开关](/components/switch) | 开关切换 |
-| [DatePicker 日期选择器](/components/date-picker) | 日期选择 |
-| [ColorPicker 颜色选择器](/components/color-picker) | 颜色选择 |
-
-### 导航组件
-
-| 组件 | 说明 |
-|------|------|
-| [DropDown 下拉菜单](/components/dropdown) | 下拉菜单 |
-| [Tabs 标签页](/components/tabs) | 标签页切换 |
 
 ### 数据展示
 
@@ -81,13 +70,6 @@ app.component('mInput', mInput)
 |------|------|
 | [Table 表格](/components/table) | 数据表格 |
 
-### 反馈组件
-
-| 组件 | 说明 |
-|------|------|
-| [Modal 对话框](/components/modal) | 模态对话框 |
-| [Message 消息提示](/components/message) | 全局消息 |
-| [Loading 加载](/components/loading) | 加载指示器 |
 
 ## 开发
 
@@ -110,9 +92,6 @@ npm run docs:dev
 
 # 构建组件库
 npm run build
-
-# 运行测试
-npm run test
 ```
 
 ## 项目结构
